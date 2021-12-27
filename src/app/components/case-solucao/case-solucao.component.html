@@ -1,0 +1,13 @@
+<mat-card class="card-solucao">
+    <h1>Case solução</h1>
+
+    <mat-radio-group aria-labelledby="example-radio-group-label" [(ngModel)]="radio_formalizacao"
+        name="radio_formalizacao" class="example-radio-group" name="radio-group-solucao">
+        <mat-radio-button class="example-radio-button" *ngFor="let formalizacao of tipos_formalizacao"
+            [value]="formalizacao">
+            {{ formalizacao }}
+        </mat-radio-button>
+    </mat-radio-group>
+
+    <button mat-raised-button color="primary" (click)="formalizacao()">Primary</button>
+</mat-card>
